@@ -87,6 +87,16 @@ const Header = () => {
                 </Menu.Item>
                 <Menu.Item>
                   {({ active }) => (
+                    <Link
+                      href="/resources"
+                      className={`block px-4 py-2 text-sm ${active ? 'bg-gray-100' : ''}`}
+                    >
+                      Resources
+                    </Link>
+                  )}
+                </Menu.Item>
+                <Menu.Item>
+                  {({ active }) => (
                     <button
                       className={`block w-full text-left px-4 py-2 text-sm ${active ? 'bg-gray-100' : ''}`}
                       onClick={() => {

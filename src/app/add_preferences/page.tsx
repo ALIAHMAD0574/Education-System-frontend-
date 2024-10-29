@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronDown, Check, X, PlusCircle } from 'lucide-react'
 import withAuth from '../components/ui/withAuth'
+import { useRouter } from 'next/navigation'
 
 interface Topic {
   id: string
@@ -21,6 +22,7 @@ const PreferencesForm = () => {
   const [newTopic, setNewTopic] = useState('')
   const [isTopicDropdownOpen, setIsTopicDropdownOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
+  const router = useRouter();
 
   useEffect(() => {
     const fetchTopics = async () => {
@@ -104,7 +106,8 @@ const PreferencesForm = () => {
       })
       if (response.ok) {
         const data = await response.json()
-        toast.success(data.message || 'Preferences saved successfully')
+        toast.success(data.message || 'Preferences saved successfully'),
+        router.push('/profile')
       } else {
         const errorData = await response.json()
         toast.error(errorData.detail || 'Failed to save preferences')

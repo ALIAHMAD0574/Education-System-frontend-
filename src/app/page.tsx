@@ -41,7 +41,7 @@ export default function LandingPage() {
                   Get Started
                 </Button>
                 <Link href="#features">
-                  <Button className="w-full sm:w-auto bg-transparent border-2 border-white text-white hover:bg-white hover:text-emerald-500 px-6 py-3 rounded-lg transition-all duration-300">
+                  <Button className="w-full sm:w-auto bg-transparent border-2 border-white text-white hover:bg-white hover:text-emerald-500 px-6 py-3 rounded-lg transition-all duration-300" onClick={() => {}}>
                     Learn More
                   </Button>
                 </Link>

@@ -107,6 +107,7 @@ export default function LandingPage() {
                   <Button
                     className="w-full sm:w-auto bg-gradient-to-r from-emerald-400 to-teal-400 px-6 py-2 text-white font-semibold rounded-lg shadow-lg hover:from-emerald-500 hover:to-teal-500 transition-all duration-300"
                     type="submit"
+                    onClick={() => {}}
                   >
                     Sign Up
                   </Button>
